@@ -7,14 +7,7 @@ pipeline:
     tags:  latest
     dockerfile: wordpress/Dockerfile
 
-publish:
-  build_wordpress:
-    repo: docker.io/leejelley/wordpress
-    registry: docker.io
-    when:
-branch: master    
-
-  build_nginx:
+  uild_nginx:
     secrets: [ docker_username, docker_password ]
     image: plugins/docker
     repo: leejelley/ngix
@@ -22,6 +15,9 @@ branch: master
     dockerfile: nginx/Dockerfile
 
 publish:
+  build_wordpress:
+    repo: docker.io/leejelley/wordpress
+    registry: docker.io
   build_nginx:
     repo: docker.io/leejelley/nginx
     registry: docker.io
