@@ -1,0 +1,29 @@
+
+img.ps-logo {
+    width: 190px;
+    height: 90px;
+    float: left;
+}
+
+table.ps-table {
+    float: left;
+}
+
+.cb {
+    clear:both;
+}
+
+.ps-activation {
+    background: white;
+    padding: 22px;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.125);
+    border: 1px solid #CECECE;
+    width: 734px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ps-getcenter {
+    margin-top: 100px;
+}
