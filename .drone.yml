@@ -2,8 +2,8 @@ pipeline:
 
   build_wordpress:
     image: plugins/docker:1.12
-    username: ${docker_user}
-    password: ${docker_pass}
+    username: ${DOCKER_USER}
+    password: ${DOCKER_PASS}
     repo: leejelley/wordpress
     tags: 
        - latest
@@ -11,8 +11,8 @@ pipeline:
 
   build_nginx:
     image: plugins/docker:1.12
-    username: ${docker_user}
-    password: ${docker_pass}
+    username: ${DOCKER_USER}
+    password: ${DOCKER_PASS}
     repo: leejelley/ngix
     tags:
        - latest
