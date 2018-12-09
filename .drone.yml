@@ -1,0 +1,26 @@
+kind: pipeline
+name: default
+
+steps:
+- name: wordpress_cnt  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_user
+    password:
+      from_secret: docker_pass
+    repo: leejelley/wordpress
+    tags: latest
+    dockerfile: wordpress/Dockerfile
+
+steps:
+- name: nginxs_cnt
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_user
+    password:
+      from_secret: docker_pass
+    repo: leejelley/nginx
+    tags: latest
+    dockerfile: nginx/Dockerfile
