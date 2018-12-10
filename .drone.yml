@@ -1,7 +1,7 @@
 pipeline:
 
   build_wordpress:
-    secrets: [ docker_user, docker_pass ]
+    secrets: [ docker_username, docker_password ]
     image: plugins/docker
     repo: leejelley/wordpress
     tags:  latest
