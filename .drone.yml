@@ -4,23 +4,15 @@ pipeline:
   build_wordpress:
     secrets: [ docker_username, docker_password ]
     image: plugins/docker
-    repo: leejelley/wordpress
-    tags:  latest
+    repo: leejelley/mbh_wordpress
+    auto_tag: true
+    auto_tag_suffix: mbh_wordpress
     dockerfile: wordpress/Dockerfile
 
   build_nginx:
     secrets: [ docker_username, docker_password ]
     image: plugins/docker
-    repo: leejelley/ngix
-    tags:  latest
+    repo: leejelley/mbh_nginx
+    auto_tag: true
+    auto_tag_suffix: mbh_nginx
     dockerfile: nginx/Dockerfile
-
-publish:
-  build_wordpress:
-    repo: docker.io/leejelley/wordpress
-    registry: docker.io
-  build_nginx:
-    repo: docker.io/leejelley/nginx
-    registry: docker.io
-    when:
-branch: master
