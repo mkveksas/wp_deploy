@@ -7,7 +7,7 @@ pipeline:
     tags:  latest
     dockerfile: wordpress/Dockerfile
 
-  uild_nginx:
+  build_nginx:
     secrets: [ docker_username, docker_password ]
     image: plugins/docker
     repo: leejelley/ngix
